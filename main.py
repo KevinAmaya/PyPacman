@@ -25,8 +25,6 @@ class Main():
                 ticks = math.floor((current-start)/(1/60))
                 while ticks>0:
                     ticks -= 1
-            print("something")
-
 
 main = Main()
 main.run()
