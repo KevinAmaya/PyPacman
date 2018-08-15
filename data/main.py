@@ -1,14 +1,16 @@
 import sys, pygame
 import math
 from time import time, sleep
+from components.pacman import Pacman
 
 class Main():
     endgame = False
-    
+
     def __init__(self):
         endgame = False
         pygame.init()
-        size = width, height = 320, 240
+        self.player = Pacman()
+        size = width, height = 640, 480
         screen = pygame.display.set_mode(size)
 
 
@@ -16,6 +18,7 @@ class Main():
         while not self.endgame:
             start = time()
             #do something
+            self.player.update()
             current = time()
             #If the frame is ahead of schedule time do this
             if current - start <= 1/60:
@@ -28,6 +31,11 @@ class Main():
 
 main = Main()
 main.run()
+
+
+
+
+
 
 """
 pygame.init()

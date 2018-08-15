@@ -1,3 +1,3 @@
 class Pacman():
- def Update():
+ def update(self):
   print("updating pacman")

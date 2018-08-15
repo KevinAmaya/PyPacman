@@ -1,1 +1,1 @@
-name = "main"
+name = "__main__"
